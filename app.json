@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "vcamera",
-    "slug": "vcamera",
-    "version": "1.0.0",
+    "name": "Barcode Scanner",
+    "slug": "try-barcode-scanner",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -25,6 +25,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera", // iOS
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone", // iOS
+          "recordAudioAndroid": true
+        }
+      ]
+    ]
   }
 }
